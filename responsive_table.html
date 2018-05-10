@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Responsive Table</title>
+
+<style>
+p {
+text-align: center;
+}
+
+table {
+width: 50%;
+}
+
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 15px;
+text-align: center;
+}
+
+
+
+@media screen and (max-width: 640px) {
+thead {
+  display: none;
+}
+
+td {
+  display: block;
+  position: relative;
+  padding-left: 50%;
+/*     margin-bottom: 3px; */
+  text-align: right;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+td:before {
+  content: attr(data-th);
+  position: absolute;
+  left: 10px;
+  width: 50%;
+  font-weight: inherit;
+  text-align: left;
+}
+}
+
+th:first-child,
+td:first-child {
+color: white;
+font-weight: bold;
+background: lightblue;
+}
+</style>
+
+</head>
+<body>
+
+  <table id="t01">
+      <caption><b>Daily Diet For Weekdays - Fully Responsive Table</b></caption>
+      <thead>
+        <tr id="header">
+          <th>Week Day</th>
+          <th>Proteins</th>
+          <th>Vegetables</th>
+          <th>Fruits</th>
+          <th>Drinks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="Day">Monday</td>
+          <td data-th="Proteins">Ribeyes</td>
+          <td data-th="Vegetables">Tomatoes</td>
+          <td data-th="Fruits">Oranges</td>
+          <td data-th="Drinks">Diet Coke</td>
+        </tr>
+        <tr>
+          <td data-th="Day">Tuesday</td>
+          <td data-th="Proteins">Tilapia</td>
+          <td data-th="Vegetables">Spinachs</td>
+          <td data-th="Fruits">Bananas</td>
+          <td data-th="Drinks">Milk</td>
+        </tr>
+        <tr>
+          <td data-th="Day">Wednesday</td>
+          <td data-th="Proteins">Pork Chops</td>
+          <td data-th="Vegetables">Bak Choy</td>
+          <td data-th="Fruits">Cuties</td>
+          <td data-th="Drinks">Orange Juice</td>
+        </tr>
+         <tr>
+          <td data-th="Day">Thursday</td>
+          <td data-th="Proteins">Flank beef</td>
+          <td data-th="Vegetables">Asparagus</td>
+          <td data-th="Fruits">Apples</td>
+          <td data-th="Drinks">Budweiser</td>
+        </tr>
+         <tr>
+          <td data-th="Day">Friday</td>
+          <td data-th="Proteins">Chicken Hearts</td>
+          <td data-th="Vegetables">Lettuce</td>
+          <td data-th="Fruits">Pineapple</td>
+          <td data-th="Drinks">Apple Juice</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>By Heindrick Cheung-Mobile Web Specialist and Front-end Developer</p>
+
+</body>
+</html>
